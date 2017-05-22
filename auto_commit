@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ ! -e tmp  ];then
+    echo 1 > tmp
+else
+	number=`cat tmp`
+	echo $((number+1)) > tmp
+fi
+
+git add .
+
+git commit -m 'touch to get a new commit'
+
